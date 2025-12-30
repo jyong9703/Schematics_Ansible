@@ -1,0 +1,4 @@
+---
+# Default variables
+cos_bucket_prefix: "tpc-cos-"  
+folder_prefix: "app/data/"
