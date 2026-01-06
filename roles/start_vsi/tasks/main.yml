@@ -1,8 +1,8 @@
 ---
 - name: Start Classic VSI
   uri:
-    url: "{{ sl_api_base }}/SoftLayer_Virtual_Guest/{{ vsi_id }}/powerOn"
-    method: POST
+    url: "{{ sl_api_base }}/SoftLayer_Virtual_Guest/{{ vsi_id }}/powerOn.json"
+    method: GET
     user: "{{ classic_username }}"
     password: "{{ classic_api_key }}"
     force_basic_auth: yes
