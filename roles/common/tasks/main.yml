@@ -1,0 +1,8 @@
+---
+- name: Validate required variables
+  assert:
+    that:
+      - classic_username is defined
+      - classic_api_key is defined
+      - vsi_id is defined
+    fail_msg: "classic_username, classic_api_key and vsi_id must be provided"

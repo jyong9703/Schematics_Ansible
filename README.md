@@ -1,17 +1,17 @@
-# Schematics COS Action
+# Classic VSI Power Actions (Schematics)
 
-This repo is an IBM Cloud Schematics Ansible Action template to:
+This repository provides two Ansible playbooks to manage IBM Cloud Classic Virtual Server Instances
+using SoftLayer API to start and stop instances.
 
-1. Create a Cloud Object Storage (COS) bucket with a random suffix.
-2. Create a directory prefix inside the bucket (`app/data/`).
+## Playbooks
 
-## How to use
+- **start-vsi-playbook.yml** : Start Classic VSI
+- **stop-vsi-playbook.yml** : Stop Classic VSI
 
-1. Set environment variables in your Schematics Action:
+## Required Variables
 
-```bash
-export COS_ACCESS_KEY_ID=<your-hmac-access-key-id>
-export COS_SECRET_ACCESS_KEY=<your-hmac-secret-key>
-export COS_ENDPOINT=<your-cos-endpoint>
-export COS_REGION=<your-region>
-
+| Variable | Description |
+|----------|-------------|
+| classic_username | Classic Infrastructure username |
+| classic_api_key | Classic Infrastructure API key |
+| vsi_id | Virtual Server ID |

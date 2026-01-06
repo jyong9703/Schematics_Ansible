@@ -1,0 +1,14 @@
+---
+- name: Start Classic VSI via SoftLayer API
+  hosts: localhost
+  connection: local
+  gather_facts: false
+
+  vars:
+    classic_username: "{{ classic_username }}"
+    classic_api_key: "{{ classic_api_key }}"
+    vsi_id: "{{ vsi_id }}"
+
+  roles:
+    - common
+    - start_vsi
