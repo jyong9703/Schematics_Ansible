@@ -7,3 +7,9 @@
     password: "{{ classic_api_key }}"
     force_basic_auth: yes
     status_code: 200
+    return_content: yes
+  register: result
+
+- name: Debug result
+  debug:
+    msg: "{{ result }}"
